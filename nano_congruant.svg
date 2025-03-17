@@ -1,0 +1,24 @@
+<svg
+   viewBox="-10 -10 420 610"
+   width="420"
+   height="610"
+   xmlns="http://www.w3.org/2000/svg">
+  <title>Modified Nano Symbol</title>
+    <style>
+    .fill-color {
+      fill: #209ce9;
+    }
+  </style>
+  <path
+     class="bottom-horizontal fill-color"
+     d="M 360,398.37 V 363.73 H 40 v 34.64 z" />
+  <path
+     class="top-horizontal fill-color"
+     d="M 360,294.45 V 277.13 259.81 H 40 v 17.32 17.32 z"/>
+  <path
+     class="x+ fill-color"
+     d="m 360,0 h 20 L 40,588.9 H 0 L 340,0 Z" />
+  <path
+     class="x- fill-color"
+     d="M 40,0 H 60 L 400,588.9 H 360 L 20,0 Z" />
+</svg>
