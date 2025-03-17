@@ -19,11 +19,11 @@ This editor generates the Nano symbol based on these key principles:
 ### Basic Mode
 
 - **Chunky Style**: Easily adjust the thickness and proportion of all elements
-- **Corner Radius**: Add rounded corners to the symbol elements (!CURRENTLY NOT WORKING)
+- **Corner Radius**: Add rounded corners to the symbol elements (!CURRENTLY NOT WORKING!)
 - **Color Customization**: Change the fill color to match your branding
 - **Clean SVG Output**: Generate minimal, optimized SVG code, perfect for websites, printing materials, and design projects
 
-### Advanced Mode
+### Advanced Mode (!Must be loaded without editing basic settings first!)
 
 - **X Width Adjustments**: Fine-tune inner and outer points independently
 - **Horizontal Bar Dimension Controls**: Precisely modify width, thickness, and height of box elements
