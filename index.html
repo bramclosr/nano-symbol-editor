@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(Unofficial) Nano Symbol Editor</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>(Unofficial) Nano Symbol Editor</h1>
+        <div class="mode-toggle">
+            <button id="basicModeBtn" class="toggle-btn active">Basic</button>
+            <button id="advancedModeBtn" class="toggle-btn">Advanced</button>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="controls">
+            <!-- Basic settings -->
+            <div id="basicSettings" class="settings-panel">
+                <h2>Basic Settings</h2>
+                
+                <!-- Chunky slider -->
+                <div class="slider-container">
+                    <label for="chunkySlider">Chunky: <span id="chunkySliderValue">0</span></label>
+                    <input type="range" id="chunkySlider" min="0" max="100" value="0" class="slider">
+                </div>
+                
+                <!-- Corner radius slider -->
+                <div class="slider-container">
+                    <label for="cornerRadius">Corner Radius: <span id="cornerRadiusValue">0</span></label>
+                    <input type="range" id="cornerRadius" min="0" max="30" value="0" class="slider">
+                </div>
+                
+                <!-- Fill color -->
+                <div class="color-container">
+                    <label for="fillColor">Fill Color:</label>
+                    <input type="color" id="fillColor" value="#4A90E2">
+                </div>
+                
+                <button id="resetBasic" class="btn">Reset</button>
+            </div>
+            
+            <!-- Advanced settings -->
+            <div id="advancedSettings" class="settings-panel" style="display: none;">
+                <h2>Advanced Settings</h2>
+                
+                <!-- Fill color for advanced mode -->
+                <div class="color-container">
+                    <label for="advFillColor">Fill Color:</label>
+                    <input type="color" id="advFillColor" value="#4A90E2">
+                </div>
+                
+                <!-- Triangle adjustments section -->
+                <div class="adjustment-group">
+                    <h3>Triangle Adjustments</h3>
+                    
+                    <!-- Top width adjustment -->
+                    <div class="slider-container">
+                        <label>Top Width: <span id="topWidthSliderValue">0</span></label>
+                        <div class="option-row">
+                            <div class="option-buttons">
+                                <button id="topOuterPoints" class="option-btn active">Outer Points</button>
+                                <button id="topInnerPoints" class="option-btn">Inner Points</button>
+                            </div>
+                        </div>
+                        <input type="range" id="topWidthSlider" min="-40" max="80" value="0" step="5" class="slider">
+                    </div>
+                    
+                    <!-- Bottom width adjustment -->
+                    <div class="slider-container">
+                        <label>Bottom Width: <span id="bottomWidthSliderValue">0</span></label>
+                        <div class="option-row">
+                            <div class="option-buttons">
+                                <button id="bottomOuterPoints" class="option-btn active">Outer Points</button>
+                                <button id="bottomInnerPoints" class="option-btn">Inner Points</button>
+                            </div>
+                        </div>
+                        <input type="range" id="bottomWidthSlider" min="-40" max="80" value="0" step="5" class="slider">
+                    </div>
+                </div>
+                
+                <!-- Box adjustments section -->
+                <div class="adjustment-group">
+                    <h3>Box Adjustments</h3>
+                    
+                    <!-- Upper box adjustment -->
+                    <div class="slider-container">
+                        <label>Upper Box: <span id="upperBoxSliderValue">0</span></label>
+                        <div class="option-row">
+                            <div class="option-buttons">
+                                <button id="upperBoxWidthMode" class="option-btn active">Width</button>
+                                <button id="upperBoxThicknessMode" class="option-btn">Thickness</button>
+                                <button id="upperBoxHeightMode" class="option-btn">Height</button>
+                            </div>
+                        </div>
+                        <input type="range" id="upperBoxSlider" min="-40" max="80" value="0" step="5" class="slider">
+                    </div>
+                    
+                    <!-- Lower box adjustment -->
+                    <div class="slider-container">
+                        <label>Lower Box: <span id="lowerBoxSliderValue">0</span></label>
+                        <div class="option-row">
+                            <div class="option-buttons">
+                                <button id="lowerBoxWidthMode" class="option-btn active">Width</button>
+                                <button id="lowerBoxThicknessMode" class="option-btn">Thickness</button>
+                                <button id="lowerBoxHeightMode" class="option-btn">Height</button>
+                            </div>
+                        </div>
+                        <input type="range" id="lowerBoxSlider" min="-40" max="80" value="0" step="5" class="slider">
+                    </div>
+                </div>
+                
+                <!-- Individual point adjustment -->
+                <div class="adjustment-group">
+                    <h3>Individual Point Adjustment</h3>
+                    <div class="slider-container">
+                        <label for="selectedPoint">Select Point:</label>
+                        <select id="selectedPoint">
+                            <option value="">Select a point</option>
+                            <option value="2">Point 2 (Top Right Outer)</option>
+                            <option value="3">Point 3 (Bottom Left Inner)</option>
+                            <option value="4">Point 4 (Bottom Left Outer)</option>
+                            <option value="5">Point 5 (Top Left Inner)</option>
+                            <option value="7">Point 7 (Top Right Inner)</option>
+                            <option value="8">Point 8 (Bottom Right Outer)</option>
+                            <option value="9">Point 9 (Bottom Right Inner)</option>
+                            <option value="10">Point 10 (Top Left Outer)</option>
+                            <option value="11">Point 11 (Upper Box Top Right)</option>
+                            <option value="13">Point 13 (Upper Box Bottom Right)</option>
+                            <option value="14">Point 14 (Upper Box Bottom Left)</option>
+                            <option value="16">Point 16 (Upper Box Top Left)</option>
+                            <option value="17">Point 17 (Lower Box Bottom Right)</option>
+                            <option value="18">Point 18 (Lower Box Top Right)</option>
+                            <option value="19">Point 19 (Lower Box Top Left)</option>
+                            <option value="20">Point 20 (Lower Box Bottom Left)</option>
+                        </select>
+                        
+                        <div id="pointAdjustmentControls" style="display: none;">
+                            <div class="slider-container">
+                                <label>X Position: <span id="pointXDeltaValue">0</span></label>
+                                <input type="range" id="pointXDelta" min="-50" max="50" value="0" class="slider">
+                            </div>
+                            <div class="slider-container">
+                                <label>Y Position: <span id="pointYDeltaValue">0</span></label>
+                                <input type="range" id="pointYDelta" min="-50" max="50" value="0" class="slider">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Show points checkbox -->
+                <div class="checkbox-container">
+                    <label for="showPointsAdvanced">
+                        <input type="checkbox" id="showPointsAdvanced">
+                        Show Point Numbers
+                    </label>
+                </div>
+                
+                <button id="resetAdvanced" class="btn">Reset</button>
+            </div>
+            
+            <button id="downloadBtn" class="download-btn">Download SVG</button>
+        </div>
+        
+        <div class="logo-container">
+            <div class="zoom-controls">
+                <button id="zoomIn" class="zoom-btn">+</button>
+                <button id="zoomOut" class="zoom-btn">-</button>
+                <button id="resetZoom" class="zoom-btn">Reset</button>
+            </div>
+            <div id="logoPreview" class="logo-preview"></div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="tip-button-container">
+            <a href="https://nano.to/bd?amount=0.01" class="tip-button" target="_blank">
+                <i class="fas fa-thumbs-up"></i> Like with a tiny tip
+            </a>
+        </div>
+    </footer>
+    
+    <script src="js/data.js"></script>
+    <script src="js/svgGenerator.js"></script>
+    <script src="js/adjustments.js"></script>
+    <script src="js/uiControls.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
