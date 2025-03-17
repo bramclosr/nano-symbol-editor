@@ -2,30 +2,31 @@
 
 ## About This Project
 
-I created this unofficial Nano Symbol Editor after noticing inconsistencies with the SVG implementation on the nano.org website. The official symbol occasionally appeared with minor width inconsistencies and unequal angles across different platforms and materials.
+I created this unofficial Nano Symbol Editor after noticing inconsistencies with the SVG implementation on the nano.org website. The symbols availble from nano.org appeared with minor width inconsistencies and inconsisitent angles.
+
+You can download the symbol from the github, or modify it using the simple editor - [html preview](https://htmlpreview.github.io/?https://github.com/bramclosr/nano-symbol-editor/blob/main/index.html)
 
 ## Design Principles
 
 This editor generates the Nano symbol based on these key principles:
 
-- **Equilateral Triangles**: The main components are perfectly equilateral triangles, maintaining geometric harmony
+- **Equilateral Triangles**: Based off equalatileral triangles, maintaining geometric harmony
 - **Proportional Spacing**: All spacing between elements follows specific ratios, creating a balanced visual hierarchy
 - **Precise Alignment**: Every element is carefully aligned with the base and center axis, ensuring perfect symmetry
-- **Consistent Scaling**: The symbol maintains its proportions regardless of size
 
-## Features
+## Editor Features
 
 ### Basic Mode
 
 - **Chunky Style**: Easily adjust the thickness and proportion of all elements
-- **Corner Radius**: Add rounded corners to the symbol elements
+- **Corner Radius**: Add rounded corners to the symbol elements (!CURRENTLY NOT WORKING)
 - **Color Customization**: Change the fill color to match your branding
-- **Clean SVG Output**: Generate minimal, optimized SVG code without unnecessary metadata, perfect for websites, printing materials, and design projects
+- **Clean SVG Output**: Generate minimal, optimized SVG code, perfect for websites, printing materials, and design projects
 
 ### Advanced Mode
 
-- **Triangle Width Adjustments**: Fine-tune inner and outer points independently
-- **Box Dimension Controls**: Precisely modify width, thickness, and height of box elements
+- **X Width Adjustments**: Fine-tune inner and outer points independently
+- **Horizontal Bar Dimension Controls**: Precisely modify width, thickness, and height of box elements
 - **Individual Point Manipulation**: Adjust specific points for custom variations
 - **Point Visualization**: Option to display point numbers for precision editing
 
@@ -40,7 +41,7 @@ Please be aware of these current issues:
   
 ## Future Improvements
 
-I plan to address these limitations in future updates. Contributions and suggestions are welcome!
+I may address these limitations in future updates if requested. Contributions and suggestions are welcome!
 
 ## License
 
